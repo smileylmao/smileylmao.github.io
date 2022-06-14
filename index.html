@@ -8,127 +8,59 @@
              <meta content="https://smileyy.lol/embed.png" property="og:image" />
              <meta content="#121212" data-react-helmet="true" name="theme-color" />
             <meta charset="utf-8">
-<head>
-    <title>smiley</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Smiley's Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 </head>
 <body>
-    <div class="toggle" onclick="toggleMenu();"></div>
-
-    <section class="banner" id="home">
-        <div class="imgSidebar">
-            <img src="img/bg.jpg">
-        </div>
-        <div class="contentBx">
-            <h5 class="logoText">Profolio</h5>
-            <div>
-                <h4><span>Hello</span>, I'm</h4>
-                <h2>Smiley</h2>
-                <h4>I'm a front end developer</h4>
-                <p>I'm a 14 year old developer, i develop stuff.</p>
-                <a href="#" class="btn">About Me</a>
-            </div>
-            <ul class="sci">
-                <li><a href="#"><img src="img/facebook.png"></a></li>
-                <li><a href="#"><img src="img/twitter.png"></a></li>
-                <li><a href="#"><img src="img/instagram.png"></a></li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="about" id="about">
-        <div class="title white">
-        <!--Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.-->
-            <h2>About me</h2>
-            <p>Here is stuff about me</p>
-        </div>
-        <div class="content">
-            <div class="textBx">
-                <p>i play block game for a living.</p>
-            </div>
-            <div class="imgBx">
-                <img src="img/bg1.jpg">
-            </div>
-        </div>
-    </section>
-
-    <section class="work" id="work">
-        <div class="title">
-            <h2>My Recent Project</h2>
-            <p>here are projects im working on</p>
-        </div>
-        <div class="content">
-            <div class="workBx">
-                <div class="imgBx">
-                    <img src="img/img1.jpg">
-                </div>
-                <div class="textBx">
-                    <h3>Project 01</h3>
-                </div>
-            </div>
-            <div class="workBx">
-                <div class="imgBx">
-                    <img src="img/img2.jpg">
-                </div>
-                <div class="textBx">
-                    <h3>Project 02</h3>
-                </div>
-                <div class="textBx">
-                    <h3>Project 08</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <div class="title white">
-            <h2>Contact me</h2>
-            <p>here is where you can contact me</p>
-        <div class="contactForm">
-            <div class="row">
-                <div class="col50">
-                    <input type="text" name="" placeholder="Discord Username">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col50">
-                    <input type="text" name="" placeholder="Email">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col100">
-                    <textarea placeholder="Message"></textarea>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col100">
-                    <input type="submit" value="Send">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="copyright">
-        <p>Copyright &copy 2022 Smiley. All Right Reserve</p>
-    </div>
-
-    <div class="sidebar">
+    <header>
+        <a href="#" class="logo">Portfolio</a>
+        <div class="toggle" onclick="toggleMenu();"></div>
         <ul class="menu">
             <li><a href="#home" onclick="toggleMenu();">Home</a></li>
             <li><a href="#about" onclick="toggleMenu();">About</a></li>
-            <li><a href="#services" onclick="toggleMenu();">Services</a></li>
-            <li><a href="#work" onclick="toggleMenu();">Work</a></li>
-            <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
-        </ul>
-    </div>
+            <li><a href="https://discord.gg/EDk3MpGzgj" onclick="toggleMenu();">Discord</a></li>
 
-    
-    <script>
+        </ul>
+    </header>
+    <section class="banner" id="home">
+        <div class="textBx">
+            <h2>Hello, I'm<br><span>Your Name</span></h2>
+            <h3>I'm a Blah blah Developer</h3>
+            <a href="#about" class="btn">About Me</a>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="heading">
+            <h2>About Me</h2>
+        </div>
+        <div class="content">
+            <div class="contentBx w50">
+                <h3>I'm a Blah blah Developer.</h3>
+                <!--Lorem is text in put-->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas praesentium blanditiis molestias repellendus, dolorem quae maxime temporibus ex. Inventore consequuntur animi maxime vel officiis odit iure dolor soluta molestiae cum!, Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae alias cumque dignissimos aliquid, aperiam quidem distinctio, eum odio architecto magnam neque ratione obcaecati, ab sit dolor accusamus asperiores a. Magnam?<br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas ipsum magnam ratione molestias suscipit quos earum quae reprehenderit sint veritatis atque autem non, ad, eius saepe voluptatem, itaque tempore! Natus.</p>
+            </div>
+            <div class="w50">
+                <img src="img/img1.jpg" class="img">
+            </div>
+        </div>
+    </section>
+      <div class="copyright">
+        <p>Copyright &copy Smiley</p>
+    </div>
+    <script type="text/javascript">
+        window.addEventListener('scroll', function(){
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+
         function toggleMenu(){
-            const menuToggle = document.querySelector('.toggle');
-            const sidebar = document.querySelector('.sidebar');
-            menuToggle.classList.toggle('active');
-            sidebar.classList.toggle('active');
+            var  menuToggle = document.querySelector('.toggle');
+            var  menu = document.querySelector('.menu');
+            menuToggle.classList.toggle('active')
+            menu.classList.toggle('active')
         }
     </script>
 </body>
